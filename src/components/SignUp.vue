@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-
     <div class="header">
       <div class="header-description">
         <h3 class="header-title">Register to ToDo App</h3>
@@ -55,7 +54,7 @@
       </div>
     </form>
 
-    <div v-show="errorMsg">{{errorMsg}}</div>
+    <div v-show="errorMsg">{{ errorMsg }}</div>
   </div>
 </template>
 
@@ -88,6 +87,7 @@ const signUp = async () => {
     try {
       // calls the user store and send the users info to backend to logIn
       await useUserStore().signUp(email.value, password.value);
+      alert("Congrats! Your registration has been succesfull. Please don't forget to check your email to confirm ");
       // redirects user to the homeView
       redirect.push({ path: "/auth/login" });
     } catch (error) {

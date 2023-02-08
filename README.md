@@ -109,17 +109,13 @@ Pueden encontrar una copia de este proyecto en el repositorio de git hub:\***\*\
 - [ ] Creación del Sign Up
 - [ ] Empezar el apartado de las tareas
 - [ ]
-- [x] CSS - dar formato general a todas las páginas (colores, tipografías, imgs
 
 #### Day Three
 
-###### Miercoles 25, Enero 2023
+###### Jueves 9, Febrero 2023
 
-- [x] CSS - de la sección "Our Projects" de la pág "index"
-- [x] CSS - de la sección "Our Services" de la pág "index"
-- [1/2x] CSS - dar formato a la sección Main de la pág "index"
-- [x] CSS - dar formato a la pág "projects"
-- [x] CSS - dar formato a la pág "contact us"
+- [ ]
+- [ ]
 
 #### Day Four
 
@@ -150,13 +146,6 @@ Pueden encontrar una copia de este proyecto en el repositorio de git hub:\***\*\
 
 ## Acerca de nosotros
 
-Somos Gemma y Xavier. Hace 41 años que nos conocemos ;)
-Como buenos hermanos siempre hemos tenido nuestras diferencias y nos hemos "peleado". Pero ante todo, nos puede nuestro amor mutuo y querer lo mejor para ambos.
-
-Y como no podía ser de otra manera, en este proyecto hemos tenido nuestras tensiones y discrepancias pero siempre ha prevalecido nuestro amor, complicidad y el objetivo común de hacerlo lo mejor posible.
-
-Somos:
-
 Gemma Galver Lacruz
 gemma.galver@gmail.com
 Tf. 616 04 52 29
@@ -165,13 +154,6 @@ Me encanta aprender, los retos y el desarrollo personal.
 Desde mi juventud estoy conociéndome y reinventándome tanto a nivel personal como profesional y espero seguir así muchos años más. Llegué a crear una editorial infantil que publicó tres libros de autores extranjeros.
 
 Mi mayor logro y a la vez mi mayor reto ha sido crear la familia que tengo. Soy madre de dos preadolescentes que me desafían constantemente. Son mis maestros y a la vez mis aprendices.
-
-Xavier Galver Lacruz
-
-Apasionado por el diseño y las nuevas tecnologias me gusta estar al dia de la actualidad tanto del mundo online como el mundo offline. Disfrutar de mis amigos y mi familia es lo que mas me llena.
-
-Espero crecer de manera profesional y personal a través de este bootcam tan intenso e interesante.
-......
 
 La sección "sobre mí" en un archivo README es una sección que proporciona información sobre el desarrollador o equipo detrás del proyecto.
 

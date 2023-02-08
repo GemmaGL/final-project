@@ -1,5 +1,8 @@
 <template>
     <h1>Add a new Task</h1>
+    <h2>Keep your life organized, prepare for a trip ? Start here</h2>
+    <h3>Today's date is </h3>
+<!--falta buscar una libreria para la fecha????-->
     <div v-if="showErrorMessage">
         <p class="error-text">{{ errorMessage }}</p>
     </div>
@@ -16,7 +19,10 @@
 
 <script setup>
 import { ref } from "vue";
-import { useTaskStore } from "../stores/task"   
+import { useTaskStore } from "../stores/task"
+
+//faltaria definir la constante "showErrorMessage"
+//tb faltaria definir errorMessage?
 
 const taskStore = useTaskStore();
 
