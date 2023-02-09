@@ -87,7 +87,10 @@ const signUp = async () => {
     try {
       // calls the user store and send the users info to backend to logIn
       await useUserStore().signUp(email.value, password.value);
-      alert("Congrats! Your registration has been succesfull. Please don't forget to check your email to confirm ");
+      //he añadido un mensaje confirmando registro
+      alert(
+        "Congrats! Your registration has been succesfull. Please don't forget to check your email to confirm "
+      );
       // redirects user to the homeView
       redirect.push({ path: "/auth/login" });
     } catch (error) {

@@ -105,28 +105,30 @@ Pueden encontrar una copia de este proyecto en el repositorio de git hub:\***\*\
 
 ###### Miercoles 8, Febrero 2023
 
-- [ ] Trabajar con Supabase
-- [ ] Creación del Sign Up
-- [ ] Empezar el apartado de las tareas
-- [ ]
+- [x] Trabajar con Supabase
+- [x] Creación del Sign In
+- [x] Creación de una alerta que informa que nos hemos registrado correctamente
+- [x] Empezar el apartado de las tareas
+- [x] Afianzar conocimientos de Vue
 
 #### Day Three
 
 ###### Jueves 9, Febrero 2023
 
-- [ ]
-- [ ]
+- [ ] Arreglar el boton de SigIn que no conecta con la web!!!
+- [ ] NewTask.vue: crear la caja con las nuevas tareas
+- [ ] NewTask.vue: crear los botones de Task complete, Delete y Update - TaskItem.vue
+- [ ] Crear la página de Profile ver como se relaciona con PersonalRouter.vue
+- [ ] Crear la base de datos de Profile en Supabase
 
 #### Day Four
 
-###### Jueves 26, Enero 2023
+###### Viernes 10, Febrero 2023
 
-- [ ] Hacer Responsive la pág "index"
-- [ ] Hacer Responsive la pág "projects"
-- [ ] Hacer Responsive la pág " contact us"
-- [x] Hacer todo JavaScript
-- [x] Submit para el contact form
-- [x] Submit para la página "index"
+- [ ] Hacer la página de Clock (tema de las librerías)
+- [ ] Crear la barra de Navegación (para: Home, Clock, Profile)
+- [ ] Crear el logout
+- [ ] Crear el footer
 
 #### Day Five
 
@@ -174,7 +176,7 @@ Presentation Link: [Insert here your presentation link](insert-link-here)
 
 ## agradecimientos
 
-Nos gustaría dar las gracias Diego, Aleix y Jarko por toda vuestra ayuda, energía, conocimientos, paciencia, tiempo, ... sin vosotros este proyecto no sería posible. Mil gracias!!!!!
+Me gustaría dar las gracias Diego, Aleix y Jarko por toda vuestra ayuda, energía, conocimientos, paciencia, tiempo, ... sin vosotros este proyecto no sería posible. Mil gracias!!!!!
 
 Durante el proyecto hemos tenido la suerte de contar con el gran apoyo, humor, frustración, trucos, consejos, risas de nuestros compañeros. Ha hecho el camino más ameno y nos ha ayudado a seguir adelante en momentos de grandes sombras. Son un grupo increíble!
 
