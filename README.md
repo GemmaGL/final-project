@@ -67,7 +67,7 @@ La web está formada por:
 
 ### Construido Con
 
-Este proyecto ha sido construido con tres programas informáticos.
+Este proyecto ha sido construido con tres lenguajes informáticos.
 
 -HTML: con este programa se ha dado forma a la estructura de la web. Ha sido la herramienta ulitizada para poder crear diferentes apartados y formularios entre otros.
 

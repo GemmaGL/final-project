@@ -4,10 +4,6 @@
   <div class="container">
     <h3 class="header-title">Log In to ToDo App</h3>
     <p class="header-subtitle">Start organizing your tasks!</p>
-
-    Estamos en la ruta de login. Aquí deberíais crear un form con la lógica
-    correspondiente para que este permita al usuario loguearse con su email y su
-    contraseña. Miraros la lógica de SignUp si necesitáis inspiración :)
   </div>
   <form @submit.prevent="signIn" class="form-sign-in">
     <div class="form">
@@ -34,7 +30,7 @@
         />
       </div>
     </div>
-    <button class="button" type="submit">Sign In</button>
+    <button @click="signIn" class="button" type="submit">Sign In</button>
   </form>
   <p>
     Dont have an account?
@@ -67,16 +63,24 @@ const errorMsg = ref("");
 const redirect = useRouter();
 
 // Arrow function to Signin user to supaBase
-// repasarla con detenimiento porque tengo dudas
-//NO ESTA ACABADA//
-//const signIn = async () => {
-//  if(password.value === confirmPassword.value){
-//   try {
-//     await useUserStore().signIn(email.value, password.value);
-//      redirect.push({path:})
-
-//} catch (error) {}
-//};
+const signIn = async () => {
+  if (email.value && password.value) {
+    try {
+      // calls the user store and send the users info to backend to logIn
+      await useUserStore().signIn(email.value, password.value);
+      //he añadido un mensaje confirmando registro
+      redirect.push({ path: "/" });
+    } catch (error) {
+      // displays error message
+      errorMsg.value = error.message;
+      // hides error message
+      setTimeout(() => {
+        errorMsg.value = null;
+      }, 5000);
+    }
+    return;
+  }
+};
 </script>
 
 <style></style>
