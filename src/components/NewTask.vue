@@ -1,28 +1,30 @@
 <template>
-    <h1>Add a new Task</h1>
-    <h2>Keep your life organized, prepare for a trip ? Start here</h2>
-    <h3>Today's date is </h3>
-<!--falta buscar una libreria para la fecha????-->
-    <div v-if="showErrorMessage">
-        <p class="error-text">{{ errorMessage }}</p>
+  <h1>Add a new Task</h1>
+  <h2>Keep your life organized, prepare for a trip ? Start here</h2>
+  <h3>Today's date is</h3>
+  <!--FALTA BUSCAR UNA LIBRERÍA PARA LA FECHA????-->
+  <div v-if="showErrorMessage">
+    <p class="error-text">{{ errorMessage }}</p>
+  </div>
+  <div>
+    <div class="input-field">
+      <input type="text" placeholder="Add a Task Title" v-model="name" />
     </div>
-    <div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Title - Listen to Kendrick Lamar" v-model="name">
-        </div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album." v-model="description">
-        </div>
-        <button @click="addTask" class="button">Add</button>
+    <div class="input-field">
+      <input
+        type="text"
+        placeholder="Add a Task Description"
+        v-model="description"
+      />
     </div>
+    <button @click="addTask" class="button">Add</button>
+  </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { useTaskStore } from "../stores/task"
 
-//faltaria definir la constante "showErrorMessage"
-//tb faltaria definir errorMessage?
 
 const taskStore = useTaskStore();
 
@@ -36,13 +38,15 @@ const showErrorMessage = ref(false);
 // const constant to save a variable that holds the value of the error message
 const errorMessage = ref(null);
 
+const emit=defineEmits(["addTitle"]);
+
 // Arrow function para crear tareas.
 const addTask = () => {
-if(name.value.length === 0 || description.value.length === 0){
+if(name.value.length <4 || description.value.length <4){
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
-    errorMessage.value = 'The task title or description is empty';
+    errorMessage.value = 'The task title or description is too short';
     setTimeout(() => {
     showErrorMessage.value = false;
     }, 5000);
@@ -50,13 +54,13 @@ if(name.value.length === 0 || description.value.length === 0){
 } else {
     // Aquí mandamos los valores a la store para crear la nueva Task. Esta parte de la función tenéis que refactorizarla para que funcione con emit y el addTask del store se llame desde Home.vue.
 
-    taskStore.addTask(name.value, description.value);
+    await taskStore.addTask(name.value, description.value);
     name.value = '';
     description.value = '';
-}
-};
 
+    emit("addTitle")
+    }
+};
 </script>
 
 <style></style>
-  
