@@ -117,18 +117,18 @@ Pueden encontrar una copia de este proyecto en el repositorio de git hub:\***\*\
 
 - [x] Arreglar el boton de SigIn que no conecta con la web!!!
 - [x] NewTask.vue: crear la caja con las nuevas tareas
-- [1/2 ] NewTask.vue: crear los botones de Task complete, Delete y Update - TaskItem.vue
-- [ ] Crear la página de Profile ver como se relaciona con PersonalRouter.vue
-- [ ] Crear la base de datos de Profile en Supabase
+- [1/2 ] TaskItem.vue: crear los botones de Task complete, Delete y Update - TaskItem.vue
+- [x] Crear Navbar y Footer
+- [x] Crear el logout
 
 #### Day Four
 
 ###### Viernes 10, Febrero 2023
 
-- [ ] Hacer la página de Clock (tema de las librerías)
 - [1/2] Crear la barra de Navegación (para: Home, Clock, Profile)
-- [x] Crear el logout
-- [ ] Crear el footer
+- [ ] TaskItem terminarlo (Completado y alerta del delete)
+- [ ] Dar contenido al footer
+- [ ] Hacer la página de Clock (tema de las librerías)
 - [ ] Empezar con el estilo de la web
 - [ ] Crear la página de Profile ver como se relaciona con PersonalRouter.vue
 - [ ] Crear la base de datos de Profile en Supabase

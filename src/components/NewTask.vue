@@ -23,14 +23,13 @@
 
 <script setup>
 import { ref } from "vue";
-import { useTaskStore } from "../stores/task"
-
+import { useTaskStore } from "../stores/task";
 
 const taskStore = useTaskStore();
 
 // variables para los valors de los inputs
-const name = ref('');
-const description = ref('');
+const name = ref("");
+const description = ref("");
 
 // constant to save a variable that holds an initial false boolean value for the errorMessage container that is conditionally displayed depending if the input field is empty
 const showErrorMessage = ref(false);
@@ -38,28 +37,27 @@ const showErrorMessage = ref(false);
 // const constant to save a variable that holds the value of the error message
 const errorMessage = ref(null);
 
-const emit=defineEmits(["addTitle"]);
+const emit = defineEmits(["addTitle"]);
 
 // Arrow function para crear tareas.
-const addTask = () => {
-if(name.value.length <4 || description.value.length <4){
+const addTask = async () => {
+  if (name.value.length < 4 || description.value.length < 4) {
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
-    errorMessage.value = 'The task title or description is too short';
+    errorMessage.value = "The task title or description is too short";
     setTimeout(() => {
-    showErrorMessage.value = false;
+      showErrorMessage.value = false;
     }, 5000);
-
-} else {
+  } else {
     // Aquí mandamos los valores a la store para crear la nueva Task. Esta parte de la función tenéis que refactorizarla para que funcione con emit y el addTask del store se llame desde Home.vue.
 
     await taskStore.addTask(name.value, description.value);
-    name.value = '';
-    description.value = '';
+    name.value = "";
+    description.value = "";
 
-    emit("addTitle")
-    }
+    emit("addTitle");
+  }
 };
 </script>
 

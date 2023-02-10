@@ -1,7 +1,11 @@
 <template>
   <div class="container">
-    <h3>{{ task.title }}</h3>
-    <h2>{{ task.description }}</h2>
+    <h3 :class="props.task.is_complete ? 'taskCompleted' : ''">
+      {{ task.title }}
+    </h3>
+    <h4 :class="props.task.is_complete ? 'taskCompleted' : ''">
+      {{ task.description }}
+    </h4>
     <button @click="markAsCompleted">Completed</button>
     <button @click="deleteTask">Delete</button>
     <button @click="updateTask">Edit</button>
@@ -49,8 +53,19 @@ const deleteTask = async () => {
 };
 //funcion para editar la tarea - mirar los nombres en task.js
 const sendData = async () => {
-  taskStore.editTask(newtitle.value, description.value, props.task.id);
-  defineEmits();
+  if (newTitle.value.length < 4 || newDescription.value.length < 4) {
+    showErrorMessage.value = true;
+    errorMessage.value =
+      "The task title or description is empty or just too short. (That's what she said)";
+    setTimeout(() => {
+      showErrorMessage.value = false;
+    }, 5000);
+    //Lanzar un error
+    console.log("Hola pepsicola");
+  } else {
+    taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
+    emit("updateTask");
+  }
 };
 </script>
 

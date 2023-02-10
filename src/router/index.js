@@ -5,6 +5,7 @@ import Account from "../views/Account.vue";
 import SignIn from "../components/SignIn.vue";
 import SignUp from "../components/SignUp.vue";
 import Clock from "../views/Clock.vue";
+import EditProfile from "../views/EditProfile.vue";
 
 const routes = [
   {
@@ -18,6 +19,7 @@ const routes = [
   { path: "/", component: Home },
   { path: "/account", component: Account },
   { path: "/clock", component: Clock },
+  { path: "/editprof", component: EditProfile },
 ];
 
 const router = createRouter({

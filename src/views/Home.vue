@@ -8,7 +8,12 @@
     </div>
     <NewTask />
     <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+    <TaskItem
+      v-for="task in tasks"
+      :key="task.id"
+      :task="task"
+      @updateTask="getTasks"
+    />
   </div>
   <footer-component />
 </template>

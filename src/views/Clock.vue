@@ -4,7 +4,7 @@ import FooterComponent from "../components/FooterComponent.vue";
 </script>
 
 <template>
-  <nav />
+  <Nav></Nav>
 
   <!-- Mirar todo el tema del reloj y las apis-->
 
