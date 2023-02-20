@@ -1,15 +1,132 @@
-/* :root {
-    --colorWhite: #ffffff;
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Handlee&family=Neucha&family=Open+Sans&display=swap");
+
+:root {
+  margin: 0px;
+  padding: 0px;
+
+  background-color: #98f5e1;
+  opacity: 0.9;
+  color: rgb(40, 38, 38);
+  font-family: "Fredoka", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/*--colorWhite: #ffffff;
     --colorBlack: #000000;
     --colorRed: red;
     --fontSize-sm: 16px;
     --fontFamily: 'Arial, Helvetica, sans-serif';
     --fontTitle: 'Arial';
-    --fontBody: 'Helvetica';
-} */
+    --fontBody: 'Helvetica';*/
 
-/* SignIn Component */
+/* SignIn & SingUp Component */
+.header-description h2 {
+  margin-top: 15%;
+  margin-left: 10%;
+  font-size: 3rem;
+}
 
+.container0 {
+  display: flex;
+  font-size: 3rem;
+  font-style: italic;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 25%;
+  gap: 5%;
+}
+.container0 img {
+  border-radius: 0px;
+}
+
+.container1 {
+  display: flex;
+  border-radius: 10px;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container1 h1 {
+  font-size: 7rem;
+}
+
+.container1 h4 {
+  font-family: "Handle", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  width: 40%;
+  height: 150px;
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+}
+
+.form label {
+  margin-right: 5%;
+  line-height: 3;
+}
+
+.form input {
+  border-color: #98f5e1;
+  width: 50%;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.button {
+  font-style: bold;
+  width: 15%;
+  height: 25%;
+}
+
+/*Navbar component ----------*/
+
+.navbar {
+  background-image: url(../images/fondonav.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no repeat;
+  border-radius: 5px;
+  height: 200%;
+  display: flex;
+  flex-direction: row;
+  font-family: "Fredoka", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: bold;
+}
+.libretanav {
+  border-radius: 0;
+  width: 100px;
+  transform: rotate(-20deg);
+}
+
+.navbar li {
+  display: inline block;
+}
+
+.buttonsign {
+  background-color: #98f5e1;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: #98f5e1;
+  font-size: 18px;
+  font-style: bold;
+}
 /* h1 {
     color: var(--colorRed);
 } */

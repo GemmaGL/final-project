@@ -1,6 +1,7 @@
 <template>
-  <nav>
+  <nav class="navbar">
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
+    <img class="libretanav" src="../images/agenda.png" />
     <router-link to="/"> Home </router-link>
 
     <ul>
@@ -22,10 +23,10 @@
     <div>
       <ul>
         <li class="log-out-welcome">
-          <p>Welcome, user</p>
+          <p>Welcome</p>
         </li>
         <li>
-          <button @click="signOut" class="button">Log out</button>
+          <button @click="signOut" class="buttonsign">Log out</button>
         </li>
       </ul>
     </div>

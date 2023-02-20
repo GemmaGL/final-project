@@ -8,12 +8,14 @@
     </div>
     <NewTask />
     <h1>Tasks:</h1>
+    <div class="recuadro">
     <TaskItem
       v-for="task in tasks"
       :key="task.id"
       :task="task"
       @updateTask="getTasks"
     />
+    </div>
   </div>
   <footer-component />
 </template>

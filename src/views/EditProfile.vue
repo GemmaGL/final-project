@@ -7,6 +7,7 @@ const message = ref("");
   <Nav></Nav>
   <p>Message is: {{ message }}</p>
   <input v-model="message" placeholder="edit me" />
+  
 </template>
 
 <style scoped></style>
