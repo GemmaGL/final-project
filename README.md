@@ -126,16 +126,22 @@ Pueden encontrar una copia de este proyecto en el repositorio de git hub:\***\*\
 ###### Viernes 10, Febrero 2023
 
 - [1/2] Crear la barra de Navegación (para: Home, Clock, Profile)
-- [ ] TaskItem terminarlo (Completado y alerta del delete)
+- [x] TaskItem terminarlo (Completado y alerta del delete)
 - [ ] Dar contenido al footer
 - [ ] Hacer la página de Clock (tema de las librerías)
-- [ ] Empezar con el estilo de la web
+- [x] Empezar con el estilo de la web
 - [ ] Crear la página de Profile ver como se relaciona con PersonalRouter.vue
 - [ ] Crear la base de datos de Profile en Supabase
 
 #### Day Five
 
-###### Lunes 13, Febrero 2023
+###### Lunes 20, Febrero 2023
+
+- [1/2] Crear la barra de Navegación (para: Home, Clock, Profile)
+- [ ] Dar contenido al footer
+- [ ] Terminar el juego incorporado (Memory)
+- [ ] Trabajar en el Resposive de la web
+- [ ] Empezar con el estilo general de la web (colores, tipografias, cuadros)
 
 - <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

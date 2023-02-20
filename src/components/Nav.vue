@@ -10,6 +10,9 @@
       <li>
         <router-link to="/clock">Clock</router-link>
       </li>
+      <li>
+        <router-link to="/game">Game</router-link>
+      </li>
 
       <li>
         <router-link to="/account">Your Account</router-link>
@@ -36,6 +39,7 @@ import { computed } from "vue";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
 import Clock from "../views/Clock.vue";
+import Game from "../views/Game.vue";
 
 //constant to save a variable that will hold the use router method
 const route = "/";
