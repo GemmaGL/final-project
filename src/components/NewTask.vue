@@ -1,17 +1,14 @@
 <template>
-  <h1>Add a new Task</h1>
-  <h2>Keep your life organized, prepare for a trip ? Start here</h2>
-  <h3>Today's date is</h3>
-  <!--FALTA BUSCAR UNA LIBRERÍA PARA LA FECHA????-->
+  <h1 class="tituloNewTask">Let's add a new Task!</h1>
   <div v-if="showErrorMessage">
     <p class="error-text">{{ errorMessage }}</p>
   </div>
-  <div>
+  <div class="newTask">
     <div class="input-field">
       <input type="text" placeholder="Add a Task Title" v-model="name" />
     </div>
     <div class="input-field">
-      <input
+      <input class="inTextDescp"
         type="text"
         placeholder="Add a Task Description"
         v-model="description"

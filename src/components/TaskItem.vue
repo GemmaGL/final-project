@@ -1,29 +1,38 @@
 <template>
-  <div class="container">
+  <div class="containerTask">
     <h3 :class="props.task.is_complete ? 'taskCompleted' : ''">
       {{ task.title }}
     </h3>
     <h4 :class="props.task.is_complete ? 'taskCompleted' : ''">
       {{ task.description }}
     </h4>
-    <button @click="markAsCompleted">Completed</button>
-    <button @click="deleteTask">Delete</button>
-    <button @click="updateTask">Edit</button>
-    <div v-if="ShowInput">
-      <div>
-        <p>Insert title</p>
-        <input type="text" v-model="newTitle" placeholder="Insert title" />
-      </div>
-      <div>
-        <p>Insert description</p>
-        <input
-          type="text"
-          v-model="newDescription"
-          placeholder="Insert task description"
-        />
-      </div>
-      <button @click="sendData">Confirm</button>
+  </div>
+  <button class="buttCompl" @click="markAsCompleted"></button>
+  <div class="hovComp">
+    <p>Complete</p>
+  </div>
+  <button class="buttUpd" @click="updateTask"></button>
+  <div class="hovUpd">
+    <p>Edit</p>
+  </div>
+  <button class="buttDel" @click="deleteTask"></button>
+  <div class="hovDel">
+    <p>Delete</p>
+  </div>
+  <div v-if="ShowInput">
+    <div>
+      <p>Insert title</p>
+      <input type="text" v-model="newTitle" placeholder="Insert title" />
     </div>
+    <div>
+      <p>Insert description</p>
+      <input
+        type="text"
+        v-model="newDescription"
+        placeholder="Insert task description"
+      />
+    </div>
+    <button @click="sendData">Confirm</button>
   </div>
 </template>
 

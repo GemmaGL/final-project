@@ -139,9 +139,16 @@ Pueden encontrar una copia de este proyecto en el repositorio de git hub:\***\*\
 
 - [1/2] Crear la barra de Navegación (para: Home, Clock, Profile)
 - [ ] Dar contenido al footer
-- [ ] Terminar el juego incorporado (Memory)
 - [ ] Trabajar en el Resposive de la web
-- [ ] Empezar con el estilo general de la web (colores, tipografias, cuadros)
+- [x] Empezar con el estilo general de la web (colores, tipografias, cuadros)
+
+###### Martes 21, Febrero 2023
+
+- [ ] Arreglar el Responsive de la web
+- [ ] Acabar el CSS general de la web
+- [ ] Dar contenido al footer
+- [ ] Terminar el uso de los botones
+- [ ] Clock
 
 - <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

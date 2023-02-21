@@ -7,7 +7,7 @@
   background-color: #98f5e1;
   opacity: 0.9;
   color: rgb(40, 38, 38);
-  font-family: "Fredoka", Arial, Helvetica, sans-serif;
+  font-family: Fredoka, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
@@ -38,6 +38,7 @@
 }
 .container0 img {
   border-radius: 0px;
+  transform: rotate(20deg);
 }
 
 .container1 {
@@ -73,6 +74,7 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: space-around;
+  box-shadow: 5px 5px 10px gray;
 }
 
 .form label {
@@ -88,9 +90,13 @@
 }
 
 .button {
+  background-color: #98f5e1;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: #98f5e1;
+  font-size: 18px;
   font-style: bold;
-  width: 15%;
-  height: 25%;
 }
 
 /*Navbar component ----------*/
@@ -101,12 +107,17 @@
   background-position: center center;
   background-repeat: no repeat;
   border-radius: 5px;
-  height: 200%;
+  height: 130px;
+
   display: flex;
   flex-direction: row;
   font-family: "Fredoka", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-style: bold;
+  /*position: absolute;
+  left: 0;
+  right: 0;
+  top: o;*/
 }
 .libretanav {
   border-radius: 0;
@@ -114,8 +125,12 @@
   transform: rotate(-20deg);
 }
 
-.navbar li {
-  display: inline block;
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .buttonsign {
@@ -127,10 +142,89 @@
   font-size: 18px;
   font-style: bold;
 }
-/* h1 {
-    color: var(--colorRed);
-} */
+/* NewTask.vue ---------- */
 
+.newTask {
+  background-color: white;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 5px 5px 10px gray;
+}
+
+.tituloNewTask {
+  margin-left: 35%;
+}
+.inTextDescp {
+  height: 100px;
+}
+
+/* Task.vue-------*/
+
+.containerTask {
+  background-image: url(../images/Fondonotaclipamarillo.PNG);
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no repeat;
+  font-family: Handlee, Arial, Helvetica, sans-serif;
+  width: 10%;
+}
+
+.buttCompl {
+  background-image: url(../images/Botonconfirmar.PNG);
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no repeat;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.buttUpd {
+  background-image: url(../images/Botoneditar.PNG);
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no repeat;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.buttDel {
+  background-image: url(../images/Botoneliminar.PNG);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no repeat;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.hovComp {
+  display: none;
+  position: relative;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  height: 40px;
+  width: 60px;
+}
+.buttCompl:hover + .hovComp {
+  display: block;
+}
 /* SignUp Component */
 
 /* Home view */
