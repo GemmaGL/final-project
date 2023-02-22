@@ -1,37 +1,38 @@
 <template>
   <div class="containerTask">
-    <h3 :class="props.task.is_complete ? 'taskCompleted' : ''">
+    <h3 :class="props.task.is_complete ? 'taskCompleted' : 'taskNoCompleted'">
       {{ task.title }}
     </h3>
-    <h4 :class="props.task.is_complete ? 'taskCompleted' : ''">
+    <h4 :class="props.task.is_complete ? 'taskCompleted' : 'taskNoCompleted'">
       {{ task.description }}
     </h4>
   </div>
-  <button class="buttCompl" @click="markAsCompleted"></button>
-  <div class="hovComp">
-    <p>Complete</p>
-  </div>
-  <button class="buttUpd" @click="updateTask"></button>
-  <div class="hovUpd">
-    <p>Edit</p>
-  </div>
+  <template v-if="task.is_complete">
+    <button class="disabled buttUpd"></button>
+  </template>
+  <template v-else>
+    <button class="buttUpd" @click="inputToggle"></button>
+  </template>
+  <button class="buttCompl" @click="toogleTask"></button>
+
   <button class="buttDel" @click="deleteTask"></button>
-  <div class="hovDel">
-    <p>Delete</p>
-  </div>
-  <div v-if="ShowInput">
+  <div v-if="showInput">
     <div>
-      <p>Insert title</p>
+      <p>Insert new title</p>
       <input type="text" v-model="newTitle" placeholder="Insert title" />
     </div>
     <div>
-      <p>Insert description</p>
+      <p>Insert new description</p>
       <input
         type="text"
         v-model="newDescription"
         placeholder="Insert task description"
       />
     </div>
+    <div class="absolutePosition" v-if="showErrorMessage">
+      <p class="error-text">{{ errorMessage }}</p>
+    </div>
+
     <button @click="sendData">Confirm</button>
   </div>
 </template>
@@ -48,12 +49,12 @@ const props = defineProps({
   task: Object,
 });
 
-const ShowInput = ref(false);
+const showInput = ref(false);
 const newTitle = ref("");
 const newDescription = ref("");
 
 function inputToggle() {
-  ShowInput.value = !ShowInput.value;
+  showInput.value = !showInput.value;
 }
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
 const deleteTask = async () => {
@@ -61,6 +62,10 @@ const deleteTask = async () => {
   emit("updateTask");
 };
 //funcion para editar la tarea - mirar los nombres en task.js
+
+const showErrorMessage = ref();
+const errorMessage = ref(null);
+
 const sendData = async () => {
   if (newTitle.value.length < 4 || newDescription.value.length < 4) {
     showErrorMessage.value = true;
@@ -76,9 +81,32 @@ const sendData = async () => {
     emit("updateTask");
   }
 };
+
+const toogleTask = async () => {
+  await taskStore.toggleTask(props.task.id, !props.task.is_complete);
+  showInput.value = false;
+  emit("updateTask");
+};
+
+const editMessage = async () => {
+  if (props.task.is_complete === true) {
+    showErrorMessage.value = true;
+    errorMessage.value = "If you want to edit mark the task as uncomplete";
+    setTimeout(() => {
+      showErrorMessage.value = false;
+    }, 5000);
+  }
+};
 </script>
 
-<style></style>
+<style scoped>
+body {
+  margin-left: 20%;
+}
+.taskCompleted {
+  text-decoration-line: line-through;
+}
+</style>
 
 <!--
 **Hints**

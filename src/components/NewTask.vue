@@ -1,20 +1,28 @@
 <template>
-  <h1 class="tituloNewTask">Let's add a new Task!</h1>
-  <div v-if="showErrorMessage">
-    <p class="error-text">{{ errorMessage }}</p>
-  </div>
-  <div class="newTask">
-    <div class="input-field">
-      <input type="text" placeholder="Add a Task Title" v-model="name" />
+  <div class="newTaskFull">
+    <h1 class="tituloNewTask">Let's add a new Task!</h1>
+    <div v-if="showErrorMessage">
+      <p class="error-text">{{ errorMessage }}</p>
     </div>
-    <div class="input-field">
-      <input class="inTextDescp"
-        type="text"
-        placeholder="Add a Task Description"
-        v-model="description"
-      />
+    <div class="newTask">
+      <div class="input-field">
+        <input type="text" placeholder="Add a Task Title" v-model="name" />
+      </div>
+      <div class="input-field">
+        <input
+          class="inTextDescp"
+          type="text"
+          placeholder="Add a Task Description"
+          v-model="description"
+          cols="10"
+          rows="30"
+        />
+        <div v-if="showErrorMessage">
+          <p class="error-text">{{ errorMessage }}</p>
+        </div>
+      </div>
+      <button @click="addTask" class="button">Add</button>
     </div>
-    <button @click="addTask" class="button">Add</button>
   </div>
 </template>
 

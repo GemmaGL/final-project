@@ -4,7 +4,7 @@
       <div class="header">
         <div class="header-description">
           <h2>Welcome to</h2>
-          <h1 id="titulo1">My first</h1>
+          <h1 id="titulo1">My</h1>
           <img id="libreta" src="../images/agenda.png" alt="imagen libreta" />
           <div class="cajaTitulo">
             <h1>ToDo Tasks</h1>

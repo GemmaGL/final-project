@@ -28,7 +28,16 @@ export const useTaskStore = defineStore("tasks", () => {
     ]);
   };
 
-  //FALTA LA ACCIÓN DE MARCAR COMO COMPLETADAS
+  // marcar la tarea como completada
+
+  const toggleTask = async (id, boolean) => {
+    const { data, error } = await supabase
+      .from("tasks")
+      .update({
+        is_complete: boolean,
+      })
+      .match({ id: id });
+  };
 
   //editar tareas
   const editTask = async (title, description, id) => {
@@ -47,5 +56,5 @@ export const useTaskStore = defineStore("tasks", () => {
       id: id,
     });
   };
-  return { tasksArr, fetchTasks, addTask, deleteTask, editTask };
+  return { tasksArr, fetchTasks, addTask, deleteTask, editTask, toggleTask };
 });

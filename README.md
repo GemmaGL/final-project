@@ -139,16 +139,24 @@ Pueden encontrar una copia de este proyecto en el repositorio de git hub:\***\*\
 
 - [1/2] Crear la barra de Navegación (para: Home, Clock, Profile)
 - [ ] Dar contenido al footer
-- [ ] Trabajar en el Resposive de la web
+- [1/2] Trabajar en el Resposive de la web
 - [x] Empezar con el estilo general de la web (colores, tipografias, cuadros)
 
 ###### Martes 21, Febrero 2023
 
-- [ ] Arreglar el Responsive de la web
-- [ ] Acabar el CSS general de la web
-- [ ] Dar contenido al footer
-- [ ] Terminar el uso de los botones
-- [ ] Clock
+- [1/2] Arreglar el Responsive de la web
+- [1/2] Acabar el CSS general de la web
+- [x] Dar contenido al footer
+- [x] Terminar el uso de los botones
+- [x] Clock
+
+###### Martes 21, Febrero 2023
+
+- [1/2] Arreglar el Responsive de la web
+- [1/2] Acabar el CSS general de la web
+- [ ] Modal
+- [ ] Menú hamburguesa
+- [ ] SweetAlert
 
 - <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

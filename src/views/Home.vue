@@ -7,17 +7,16 @@
       <router-link to="/account">Account</router-link>
     </div>
     <NewTask />
-    <h1>Tasks:</h1>
     <div class="recuadro">
-    <TaskItem
-      v-for="task in tasks"
-      :key="task.id"
-      :task="task"
-      @updateTask="getTasks"
-    />
+      <TaskItem
+        v-for="task in tasks"
+        :key="task.id"
+        :task="task"
+        @updateTask="getTasks"
+      />
     </div>
   </div>
-  <footer-component />
+  <!--<footer-component />-->
 </template>
 
 <script setup>

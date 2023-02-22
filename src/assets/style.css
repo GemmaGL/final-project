@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Handlee&family=Neucha&family=Open+Sans&display=swap");
 
 :root {
-  margin: 0px;
-  padding: 0px;
-
   background-color: #98f5e1;
   opacity: 0.9;
   color: rgb(40, 38, 38);
@@ -11,6 +8,29 @@
   box-sizing: border-box;
 }
 
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.signincomp {
+  margin-left: 10%;
+  margin-right: 5%;
+  justify-content: center;
+}
+.container {
+  margin-top: 10%;
+}
+
+.header-description{
+  display: flex;
+}
+.container0 img {
+  border-radius: 0px;
+  width: 20%;
+}
 /*--colorWhite: #ffffff;
     --colorBlack: #000000;
     --colorRed: red;
@@ -20,25 +40,33 @@
     --fontBody: 'Helvetica';*/
 
 /* SignIn & SingUp Component */
-.header-description h2 {
+/*.header-description h2 {
+  display: flex;
   margin-top: 15%;
   margin-left: 10%;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+#titulo1 {
+  background-color: red;
+  text-align: center;
+  width: 60vw;
 }
 
 .container0 {
   display: flex;
-  font-size: 3rem;
+  font-size: 25px;
   font-style: italic;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 25%;
-  gap: 5%;
+  gap: 100px;
 }
 .container0 img {
   border-radius: 0px;
   transform: rotate(20deg);
+  width: 30%;
 }
 
 .container1 {
@@ -54,7 +82,7 @@
 }
 
 .container1 h1 {
-  font-size: 7rem;
+  font-size: 50 px;
 }
 
 .container1 h4 {
@@ -74,7 +102,7 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: space-around;
-  box-shadow: 5px 5px 10px gray;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 .form label {
@@ -106,7 +134,6 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no repeat;
-  border-radius: 5px;
   height: 130px;
 
   display: flex;
@@ -156,7 +183,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 5px 5px 10px gray;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 .tituloNewTask {
@@ -170,11 +197,17 @@
 
 .containerTask {
   background-image: url(../images/Fondonotaclipamarillo.PNG);
-  background-size: cover;
+  background-size: contain;
   background-position: 0 0;
-  background-repeat: no repeat;
+  background-repeat: no-repeat;
   font-family: Handlee, Arial, Helvetica, sans-serif;
-  width: 10%;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-left: 5%;
+  font-size: 25px;
 }
 
 .buttCompl {
@@ -225,8 +258,72 @@
 .buttCompl:hover + .hovComp {
   display: block;
 }
+
+.hovUpd {
+  display: none;
+  position: relative;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  height: 40px;
+  width: 60px;
+}
+.buttUpd:hover + .hovUpd {
+  display: block;
+}
+
+.hovDel {
+  display: none;
+  position: relative;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  height: 40px;
+  width: 60px;
+}
+.buttDel:hover + .hovDel {
+  display: block;
+}
 /* SignUp Component */
 
 /* Home view */
 
 /* Account View */
+
+/* Responsive 1: 1252px to 750px*/
+@media (max-width: 1252px) {
+  .header-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container1 {
+    height: auto;
+  }
+
+  .container2 {
+    height: auto;
+  }
+}
+
+/* Footer Component -------- */
+.footerTotal {
+  background-image: url(../images/fondonav.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no repeat;
+  height: 80px;
+
+  display: flex;
+  flex-direction: row;
+  font-family: "Fredoka", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: bold;
+  position: absolute;
+  bottom: 0;
+}
