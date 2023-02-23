@@ -1,15 +1,15 @@
 <template>
   <nav>
-  <div class="navbar">
-    <button @click="toggleMenuHamburger" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
+    <div class="navbar">
+      <button @click="toggleMenuHamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
       <img class="libretanav" src="../images/agenda.png" />
-      
+
       <div class="textsNav">
 
         <span class="nav-menu" :class="{ active: showMenu }">
@@ -28,12 +28,13 @@
         <!--<li>
             <router-link to="/account">Your Account</router-link>
           </li>-->
-      </div>
-    
         <div class="log-out-welcome">
           <button @click="signOut" class="buttonsign">Log out</button>
         </div>
-  </div>
+      </div>
+
+
+    </div>
   </nav>
 </template>
 

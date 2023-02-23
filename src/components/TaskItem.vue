@@ -15,36 +15,36 @@
       <template v-else>
         <button v-if="hideBut" class="buttUpd" @click="showModalInputToggle"></button>
       </template>
-      <button class="buttCompl" @click="toogleTask"></button>
+      <button v-if="hideBut" class="buttCompl" @click="toogleTask"></button>
 
-      <button class="buttDel" @click="showModalToggle"></button>
+      <button v-if="hideBut" class="buttDel" @click="showModalToggle"></button>
     </div>
     <div class="modalcontainer">
       <div class="modal-mask" v-if="showModal">
-         <div class="modal-wrapper">
-        <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-container">
 
-          <div class="modal-header">
-            <slot name="header">
-              Are you sure you want to delete the task "{{ task.title }}" ?
-            </slot>
-          </div>  
+            <div class="modal-header">
+              <slot name="header">
+                Are you sure you want to delete the task "{{ task.title }}" ?
+              </slot>
+            </div>
 
-          <div class="modal-body">
-            <!--<slot name="body">
+            <div class="modal-body">
+              <!--<slot name="body">
               default body
             </slot>-->
-          </div>
+            </div>
 
-          <div class="modal-footer">
-            <slot name="footer">
-              <button class="botonokmod" @click="deleteTask">Yes</button>
-              <button class="botoncancmod" @click="showModalToggle">Cancel</button>
-            </slot>
+            <div class="modal-footer">
+              <slot name="footer">
+                <button class="botonokmod" @click="deleteTask">Yes</button>
+                <button class="botoncancmod" @click="showModalToggle">Cancel</button>
+              </slot>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- <h2>Are you sure you want to delete the task "{{ task.title }}" ?</h2>
+        <!-- <h2>Are you sure you want to delete the task "{{ task.title }}" ?</h2>
       <button @click="deleteTask">Yes</button>
       <button @click="showModalToggle">Cancel</button> -->
       </div>
@@ -55,9 +55,9 @@
 
           <div class="modal-header">
             <slot name="header">
-              Here you can edit your task "{{ task.title }}" 
+              Here you can edit your task "{{ task.title }}"
             </slot>
-          </div>  
+          </div>
 
           <div class="modal-body">
             <div class="inputNewTitle">
@@ -66,11 +66,7 @@
             </div>
             <div class="inputNewDescription">
               <p>Insert new description</p>
-              <input
-                type="text"
-                v-model="newDescription"
-                placeholder="Insert task description"
-              />
+              <input type="text" v-model="newDescription" placeholder="Insert task description" />
             </div>
             <!--<slot name="body">
               default body
@@ -107,9 +103,9 @@ const props = defineProps({
 const showInput = ref(false);
 const newTitle = ref("");
 const newDescription = ref("");
-const hideBut= (true)
+const hideBut = (true)
 const showModalEdit = ref(false);
-const showModalInputToggle = () =>{
+const showModalInputToggle = () => {
   showModalEdit.value = !showModalEdit.value;
 };
 
@@ -171,13 +167,11 @@ const editMessage = async () => {
 body {
   margin-left: 20%;
 }
+
 .taskCompleted {
   text-decoration-line: line-through;
-  color: #98f5e1; 
+  color: #98f5e1;
 }
-
-
-
 </style>
 
 
