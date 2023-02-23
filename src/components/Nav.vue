@@ -1,38 +1,39 @@
 <template>
   <nav>
-    <div class="navbar">
+  <div class="navbar">
+    <button @click="toggleMenuHamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
       <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
       <img class="libretanav" src="../images/agenda.png" />
+      
       <div class="textsNav">
-        <router-link to="/"> Home </router-link>
 
-        <ul class="navList">
-          <li>
-            <router-link to="/">Task Manager</router-link>
-          </li>
-          <li>
-            <router-link to="/clock">Clock</router-link>
-          </li>
-          <!--<li>
+        <span class="nav-menu" :class="{ active: showMenu }">
+          <router-link v-if="showMenu" to="/" class="navBtn"> Home </router-link>
+          <router-link v-if="showMenu" to="/" class="navBtn">Task Manager</router-link>
+          <router-link v-if="showMenu" to="/Clock" class="navBtn">Clock</router-link>
+          <!--<router-link v-if="showMenu" to="/account" class="navBtn">Your Account</router-link>-->
+        </span>
+
+        <span class="nav-ordernador">
+          <router-link to="/" class="navBtn"> Home </router-link>
+          <router-link to="/" class="navBtn">Task Manager</router-link>
+          <router-link to="/Clock" class="navBtn">Clock</router-link>
+        </span>
+
+        <!--<li>
             <router-link to="/account">Your Account</router-link>
           </li>-->
-        </ul>
-
-        <div>
-          <ul>
-            <li class="log-out-welcome">
-            </li>
-            <li>
-              <button @click="signOut" class="buttonsign">Log out</button>
-            </li>
-          </ul>
-          
-        </div>
       </div>
-    </div>
-    <div class="menuHamb">
-      
-    </div>
+    
+        <div class="log-out-welcome">
+          <button @click="signOut" class="buttonsign">Log out</button>
+        </div>
+  </div>
   </nav>
 </template>
 
@@ -58,6 +59,14 @@ const userEmail = getUser.email;
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
 const redirect = useRouter();
 
+const showMenu = ref(false);
+
+const toggleMenuHamburger = () => {
+  showMenu.value = !showMenu.value;
+  const hamburger = document.querySelector(".hamburger");
+  hamburger.classList.toggle("active");
+};
+
 const signOut = async () => {
   try {
     // call the user store and send the users info to backend to signOut
@@ -74,7 +83,8 @@ const signOut = async () => {
   return;
   errorMsg.value = "error";
 };
+
+
 </script>
 
-<style>
-</style>
+<style></style>
