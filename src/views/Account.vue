@@ -9,6 +9,10 @@
     "
     alt="Profile picture"
   />
+  <h2>Email:{{ email }}</h2>
+  <h2>Total Tasks completed:</h2>
+  <h2>Pending Tasks:</h2>
+
 
   <button @click="goToEdit">Edit</button>
 </template>

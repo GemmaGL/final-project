@@ -13,9 +13,9 @@
           <li>
             <router-link to="/clock">Clock</router-link>
           </li>
-          <li>
+          <!--<li>
             <router-link to="/account">Your Account</router-link>
-          </li>
+          </li>-->
         </ul>
 
         <div>
@@ -29,6 +29,9 @@
           
         </div>
       </div>
+    </div>
+    <div class="menuHamb">
+      
     </div>
   </nav>
 </template>

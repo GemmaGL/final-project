@@ -13,11 +13,44 @@
         <button class="disabled buttUpd"></button>
       </template>
       <template v-else>
-        <button class="buttUpd" @click="inputToggle"></button>
+        <button v-if="hideBut" class="buttUpd" @click="inputToggle"></button>
       </template>
       <button class="buttCompl" @click="toogleTask"></button>
 
-      <button class="buttDel" @click="deleteTask"></button>
+      <button class="buttDel" @click="showModalToggle"></button>
+    </div>
+    <div class="modalcontainer">
+      <div class="modal-mask" v-if="showModal">
+         <div class="modal-wrapper">
+        <div class="modal-container">
+
+          <div class="modal-header">
+            <slot name="header">
+              Are you sure you want to delete the task "{{ task.title }}" ?
+            </slot>
+          </div>  
+
+          <div class="modal-body">
+            <!--<slot name="body">
+              default body
+            </slot>-->
+          </div>
+
+          <div class="modal-footer">
+            <slot name="footer">
+              <!--<button class="modal-default-button" @click="$emit('close')">
+                OK
+              </button> -->
+              <button class="botonokmod" @click="deleteTask">Yes</button>
+              <button class="botoncancmod" @click="showModalToggle">Cancel</button>
+            </slot>
+          </div>
+        </div>
+      </div>
+      <!-- <h2>Are you sure you want to delete the task "{{ task.title }}" ?</h2>
+      <button @click="deleteTask">Yes</button>
+      <button @click="showModalToggle">Cancel</button> -->
+      </div>
     </div>
     <div v-if="showInput">
       <div>
@@ -56,6 +89,7 @@ const props = defineProps({
 const showInput = ref(false);
 const newTitle = ref("");
 const newDescription = ref("");
+const hideBut= (true)
 
 function inputToggle() {
   showInput.value = !showInput.value;
@@ -63,7 +97,14 @@ function inputToggle() {
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
 const deleteTask = async () => {
   await taskStore.deleteTask(props.task.id);
-  emit("updateTask");
+  console.log("patata");
+  showModalToggle();
+};
+
+const completedTask = ref(false);
+const showModal = ref(false);
+const showModalToggle = () => {
+  showModal.value = !showModal.value;
 };
 //funcion para editar la tarea - mirar los nombres en task.js
 
@@ -79,9 +120,8 @@ const sendData = async () => {
       showErrorMessage.value = false;
     }, 5000);
     //Lanzar un error
-    console.log("Hola pepsicola");
   } else {
-    taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
+    await taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
     emit("updateTask");
   }
 };
@@ -90,6 +130,7 @@ const toogleTask = async () => {
   await taskStore.toggleTask(props.task.id, !props.task.is_complete);
   showInput.value = false;
   emit("updateTask");
+  hideBut=!hideBut;
 };
 
 const editMessage = async () => {
@@ -111,10 +152,52 @@ body {
   text-decoration-line: line-through;
   color: #98f5e1; 
 }
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 300px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
 </style>
 
-<!--
-**Hints**
+
+<!-- **Hints**
 1. ref() or reactive() can be used here to store the following, think if you want to store them either individually or
 like an object, up to you.
 
@@ -144,5 +227,4 @@ from the object used on this part of the conditional and lastly this part of the
 to an empty string to clear it from the ui.
 
 8. Function to emmit a custom event emit() that takes 2 parameters a name for the custom event and the value that will be
-send via the prop to the parent component. This function can control the removal of  the task on the homeview.
--->
+send via the prop to the parent component. This function can control the removal of  the task on the homeview. -->

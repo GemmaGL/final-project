@@ -37,19 +37,21 @@ onMounted(() => {
 
 <template>
   <Nav></Nav>
-  <div class="textClock">What time is it?</div>
-  <img class="imgClock" src="../images/despertador.png" alt="despertador" />
-
-  <div class="clock">
-    <span class="hour">{{ hours }}</span
-    >: <span class="minute">{{ minutes }}</span
-    >:
-    <span class="second">{{ seconds }}</span>
+  <div class="clockContainer">
+    <div class="textClock">What time is it?</div>
+    <img class="imgClock" src="../images/despertador.png" alt="despertador" />
+  
+    <div class="clock">
+      <span class="hour">{{ hours }}</span
+      >: <span class="minute">{{ minutes }}</span
+      >:
+      <span class="second">{{ seconds }}</span>
+    </div>
+    <div class="nino">
+      <img src="../images/ninopaz.png" />
+    </div>
+    <div class="blanco"></div>
   </div>
-  <div class="nino">
-    <img src="../images/ninopaz.png" />
-  </div>
-  <div class="blanco"></div>
   <footer-component />
 </template>
 

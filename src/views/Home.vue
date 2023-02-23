@@ -3,10 +3,10 @@
     <Nav />
 
     <div class="content">
-      <h3>Your account:</h3>
-      <router-link to="/account">Account</router-link>
+      <!--<h3>Your account:</h3>
+      <router-link to="/account">Account</router-link>-->
     </div>
-    <NewTask />
+    <NewTask @addTitle="getTasks"/>
     <div class="recuadro">
       <TaskItem
         v-for="task in tasks"
@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onUpdated, ref } from "vue";
 import { useTaskStore } from "../stores/task";
 import { useRouter } from "vue-router";
 import Nav from "../components/Nav.vue";
@@ -39,6 +39,10 @@ const getTasks = async () => {
 };
 
 getTasks();
+
+onUpdated(() => {
+  getTasks();
+})
 </script>
 
 <style></style>
