@@ -1,34 +1,34 @@
 <template>
-  <nav class="navbar">
-    <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <img class="libretanav" src="../images/agenda.png" />
-    <router-link to="/"> Home </router-link>
+  <nav>
+    <div class="navbar">
+      <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
+      <img class="libretanav" src="../images/agenda.png" />
+      <div class="textsNav">
+        <router-link to="/"> Home </router-link>
 
-    <ul>
-      <li>
-        <router-link to="/">Task Manager</router-link>
-      </li>
-      <li>
-        <router-link to="/clock">Clock</router-link>
-      </li>
-      <li>
-        <router-link to="/game">Game</router-link>
-      </li>
+        <ul class="navList">
+          <li>
+            <router-link to="/">Task Manager</router-link>
+          </li>
+          <li>
+            <router-link to="/clock">Clock</router-link>
+          </li>
+          <li>
+            <router-link to="/account">Your Account</router-link>
+          </li>
+        </ul>
 
-      <li>
-        <router-link to="/account">Your Account</router-link>
-      </li>
-    </ul>
-
-    <div>
-      <ul>
-        <li class="log-out-welcome">
-          <p>Welcome</p>
-        </li>
-        <li>
-          <button @click="signOut" class="buttonsign">Log out</button>
-        </li>
-      </ul>
+        <div>
+          <ul>
+            <li class="log-out-welcome">
+            </li>
+            <li>
+              <button @click="signOut" class="buttonsign">Log out</button>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
     </div>
   </nav>
 </template>
@@ -40,7 +40,6 @@ import { computed } from "vue";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
 import Clock from "../views/Clock.vue";
-import Game from "../views/Game.vue";
 
 //constant to save a variable that will hold the use router method
 const route = "/";
@@ -75,23 +74,4 @@ const signOut = async () => {
 </script>
 
 <style>
-.navbar-img {
-  width: 90px;
-}
-
-nav {
-  background-color: lightgray;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 </style>

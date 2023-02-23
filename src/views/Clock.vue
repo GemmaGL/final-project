@@ -1,7 +1,22 @@
-<script>
+<script setup>
 import Nav from "../components/Nav.vue";
 import FooterComponent from "../components/FooterComponent.vue";
-export default {
+import { ref, onMounted } from "vue";
+
+const hours = ref("");
+const minutes = ref("");
+const seconds = ref("");
+
+onMounted(() => {
+  setInterval(() => {
+    const now = new Date();
+    hours.value = now.getHours();
+    minutes.value = now.getMinutes();
+    seconds.value = now.getSeconds();
+  }, 1000);
+});
+
+/* export default {
   data() {
     return {
       hours: "",
@@ -17,17 +32,24 @@ export default {
       this.seconds = now.getSeconds();
     }, 1000);
   },
-};
+}; */
 </script>
 
 <template>
   <Nav></Nav>
+  <div class="textClock">What time is it?</div>
+  <img class="imgClock" src="../images/despertador.png" alt="despertador" />
+
   <div class="clock">
     <span class="hour">{{ hours }}</span
     >: <span class="minute">{{ minutes }}</span
     >:
     <span class="second">{{ seconds }}</span>
   </div>
+  <div class="nino">
+    <img src="../images/ninopaz.png" />
+  </div>
+  <div class="blanco"></div>
   <footer-component />
 </template>
 

@@ -1,69 +1,70 @@
 <template>
-  <main>
-    <div class="container">
-      <div class="header">
-        <div class="header-description">
-          <h2>Welcome to</h2>
-          <h1 id="titulo1">My</h1>
-          <img id="libreta" src="../images/agenda.png" alt="imagen libreta" />
-          <div class="cajaTitulo">
-            <h1>ToDo Tasks</h1>
-            <h4>Will help you to Keep your tasks under control</h4>
-          </div>
-          <h3 class="header-title">Register to ToDo App</h3>
-          <p class="header-subtitle">Start organizing your tasks!</p>
+  <main class="singUpG">
+    <div class="singingeneral">
+      <div class="containersing0">
+        <img class="libreta" src="../images/agenda.png" alt="imagen libreta" />
+        <div class="containersing1">
+          <h3>Welcome to</h3>
+          <h2 class="tit1"><i>My first</i></h2>
+          <h1>ToDo Tasks</h1>
+          <h4>Will help you to Keep your tasks under control!</h4>
         </div>
       </div>
+      <div class="containersing2">
+        <h3 class="header.title">Register to ToDo App</h3>
+        <p class="header-subtitle">Start organizing your tasks!</p>
 
-      <form @submit.prevent="signUp" class="form-sign-in">
-        <div class="form">
-          <div class="form-input">
-            <label class="input-field-label">E-mail</label>
-            <input
-              type="email"
-              class="input-field"
-              placeholder="example@gmail.com"
-              id="email"
-              v-model="email"
-              required
-            />
+        <form @submit.prevent="signUp" class="form-sign-in">
+          <div class="form">
+            <div class="form-input">
+              <label class="input-field-label"></label>
+              <input
+                type="email"
+                class="input-field"
+                placeholder="insert your email here"
+                id="email"
+                v-model="email"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <label class="input-field-label"></label>
+              <input
+                type="password"
+                class="input-field"
+                placeholder="insert your pasword here"
+                id="password"
+                v-model="password"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <label class="input-field-label"></label>
+              <input
+                type="password"
+                class="input-field"
+                placeholder="confirm your password"
+                id="confirmPassword"
+                v-model="confirmPassword"
+                required
+              />
+            </div>
+            <button class="buttonSign" type="submit">Sign Up</button>
+            <p>
+              Have an account?
+              <PersonalRouter
+                :route="route"
+                :buttonText="buttonText"
+                class="sign-up-link"
+              />
+            </p>
           </div>
-          <div class="form-input">
-            <label class="input-field-label">Password</label>
-            <input
-              type="password"
-              class="input-field"
-              placeholder="**********"
-              id="password"
-              v-model="password"
-              required
-            />
-          </div>
-          <div class="form-input">
-            <label class="input-field-label">Confirm password</label>
-            <input
-              type="password"
-              class="input-field"
-              placeholder="**********"
-              id="confirmPassword"
-              v-model="confirmPassword"
-              required
-            />
-          </div>
-          <button class="button" type="submit">Sign Up</button>
-          <p>
-            Have an account?
-            <PersonalRouter
-              :route="route"
-              :buttonText="buttonText"
-              class="sign-up-link"
-            />
-          </p>
-        </div>
-      </form>
+        </form>
+      </div>
+    </div>
+          
 
       <div v-show="errorMsg">{{ errorMsg }}</div>
-    </div>
   </main>
 </template>
 
@@ -119,7 +120,7 @@ const signUp = async () => {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Handlee&family=Neucha&family=Open+Sans&display=swap");
 
-h1 {
+/*h1 {
   font-family: "Fredoka", Arial, Helvetica, sans-serif;
   font-size: 6rem;
   text-shadow: 1px, 1px, 5px, #fafafa;
@@ -151,5 +152,5 @@ h2 {
   margin: 5%;
   padding: 3%;
   text-align: center;
-}
+}*/
 </style>

@@ -1,39 +1,43 @@
 <template>
-  <div class="containerTask">
-    <h3 :class="props.task.is_complete ? 'taskCompleted' : 'taskNoCompleted'">
-      {{ task.title }}
-    </h3>
-    <h4 :class="props.task.is_complete ? 'taskCompleted' : 'taskNoCompleted'">
-      {{ task.description }}
-    </h4>
-  </div>
-  <template v-if="task.is_complete">
-    <button class="disabled buttUpd"></button>
-  </template>
-  <template v-else>
-    <button class="buttUpd" @click="inputToggle"></button>
-  </template>
-  <button class="buttCompl" @click="toogleTask"></button>
-
-  <button class="buttDel" @click="deleteTask"></button>
-  <div v-if="showInput">
-    <div>
-      <p>Insert new title</p>
-      <input type="text" v-model="newTitle" placeholder="Insert title" />
+  <div class="notadh">
+    <div class="containerTask">
+      <h3 :class="props.task.is_complete ? 'taskCompleted' : 'taskNoCompleted'">
+        {{ task.title }}
+      </h3>
+      <h4 :class="props.task.is_complete ? 'taskCompleted' : 'taskNoCompleted'">
+        {{ task.description }}
+      </h4>
     </div>
     <div>
-      <p>Insert new description</p>
-      <input
-        type="text"
-        v-model="newDescription"
-        placeholder="Insert task description"
-      />
-    </div>
-    <div class="absolutePosition" v-if="showErrorMessage">
-      <p class="error-text">{{ errorMessage }}</p>
-    </div>
+      <template v-if="task.is_complete">
+        <button class="disabled buttUpd"></button>
+      </template>
+      <template v-else>
+        <button class="buttUpd" @click="inputToggle"></button>
+      </template>
+      <button class="buttCompl" @click="toogleTask"></button>
 
-    <button @click="sendData">Confirm</button>
+      <button class="buttDel" @click="deleteTask"></button>
+    </div>
+    <div v-if="showInput">
+      <div>
+        <p>Insert new title</p>
+        <input type="text" v-model="newTitle" placeholder="Insert title" />
+      </div>
+      <div>
+        <p>Insert new description</p>
+        <input
+          type="text"
+          v-model="newDescription"
+          placeholder="Insert task description"
+        />
+      </div>
+      <div class="absolutePosition" v-if="showErrorMessage">
+        <p class="error-text">{{ errorMessage }}</p>
+      </div>
+
+      <button @click="sendData">Confirm</button>
+    </div>
   </div>
 </template>
 
@@ -105,6 +109,7 @@ body {
 }
 .taskCompleted {
   text-decoration-line: line-through;
+  color: #98f5e1; 
 }
 </style>
 

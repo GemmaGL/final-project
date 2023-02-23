@@ -1,7 +1,58 @@
-<!-- COMPONENTE BOILERPLATE -->
-
 <template>
-  
+  <div class="singingeneral">
+    <div class="containersing0">
+      <img class="libreta" src="../images/agenda.png" alt="imagen libreta" />
+      <div class="containersing1">
+        <h3>Welcome to</h3>
+        <h2 class="tit1"><i>My first </i></h2>
+        <h1>ToDo Tasks</h1>
+        <h4>Will help you to Keep your tasks under control!</h4>
+      </div>
+      <div class="containersing2">
+        <h3 class="header-title">Log In to ToDo App</h3>
+        <p class="header-subtitle">Start organizing your tasks!</p>
+        <form @submit.prevent="signIn" class="form-sign-in">
+          <div class="formInputs">
+            <div class="form">
+              <div class="form-input">
+                <label class="input-field-label"></label>
+                <input
+                  type="email"
+                  class="input-field"
+                  placeholder="insert your email here"
+                  id="email"
+                  v-model="email"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <label class="input-field-label"></label>
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="insert your pasword here"
+                  id="password"
+                  v-model="password"
+                  required
+                />
+              </div>
+            </div>
+            <button @click="signIn" class="buttonSign" type="submit">
+              Sign In
+            </button>
+          </div>
+        </form>
+        <p>
+          Dont have an account?
+          <PersonalRouter
+            :route="route"
+            :buttonText="buttonText"
+            class="sign-up-link"
+          />
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>

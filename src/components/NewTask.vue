@@ -6,7 +6,7 @@
     </div>
     <div class="newTask">
       <div class="input-field">
-        <input type="text" placeholder="Add a Task Title" v-model="name" />
+        <input class="inputTitle" type="text" placeholder="Add a Task Title" v-model="name" />
       </div>
       <div class="input-field">
         <input
@@ -21,7 +21,7 @@
           <p class="error-text">{{ errorMessage }}</p>
         </div>
       </div>
-      <button @click="addTask" class="button">Add</button>
+      <button @click="addTask" class="buttonAdd">Add</button>
     </div>
   </div>
 </template>

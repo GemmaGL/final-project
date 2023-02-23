@@ -15,131 +15,125 @@ body {
   padding: 0;
 }
 
-.signincomp {
-  margin-left: 10%;
-  margin-right: 5%;
-  justify-content: center;
-}
-.container {
-  margin-top: 10%;
-}
+/*DIseño WEB MOBILE FIRST*/
 
-.header-description{
-  display: flex;
+/* Estilo de SIGN-IN */
+
+.singingeneral {
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-.container0 img {
+.libreta {
   border-radius: 0px;
   width: 20%;
-}
-/*--colorWhite: #ffffff;
-    --colorBlack: #000000;
-    --colorRed: red;
-    --fontSize-sm: 16px;
-    --fontFamily: 'Arial, Helvetica, sans-serif';
-    --fontTitle: 'Arial';
-    --fontBody: 'Helvetica';*/
-
-/* SignIn & SingUp Component */
-/*.header-description h2 {
-  display: flex;
-  margin-top: 15%;
-  margin-left: 10%;
-  font-size: 2rem;
-}
-
-#titulo1 {
-  background-color: red;
-  text-align: center;
-  width: 60vw;
-}
-
-.container0 {
-  display: flex;
-  font-size: 25px;
-  font-style: italic;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-left: 25%;
-  gap: 100px;
-}
-.container0 img {
-  border-radius: 0px;
+  float: right;
   transform: rotate(20deg);
-  width: 30%;
+  margin-right: 10%;
 }
 
-.container1 {
+.containersing1 {
+  margin-left: 20%;
   display: flex;
-  border-radius: 10px;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 80%;
+  gap: 15px;
+}
+
+.containersing1 h1 {
+  margin-left: 5%;
+  width: 80vw;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px rgb(254, 252, 252);
+}
+
+.containersing1 h2 {
+  font-family: handlee, Arial, Helvetica, sans-serif;
+  color: rgb(40, 38, 38);
+  font-size: 500%;
+  font-weight: 900;
+  -webkit-text-stroke: 0.1px white;
+  line-height: 50px;
+}
+
+.containersing1 h4 {
+  width: 70vw;
+}
+
+.containersing2 {
+  margin-top: 5%;
+  margin-bottom: 5%;;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  font-size: 80%;
+  gap: 5px;
+}
+
+.formInputs {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
-  height: 250px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 10px;
 }
 
-.container1 h1 {
-  font-size: 50 px;
-}
-
-.container1 h4 {
-  font-family: "Handle", Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-size: 1.5rem;
-}
-
-.container2 {
+.form {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  border-radius: 10px;
-  width: 40%;
-  height: 150px;
-  padding: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-around;
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.form label {
-  margin-right: 5%;
-  line-height: 3;
-}
-
-.form input {
-  border-color: #98f5e1;
-  width: 50%;
+.buttonSign {
+  background-color: #98f5e1;
+  width: 30%;
   height: 25px;
   border-radius: 5px;
-}
-
-.button {
-  background-color: #98f5e1;
-  width: 80px;
-  height: 40px;
-  border-radius: 5px;
   border-color: #98f5e1;
-  font-size: 18px;
+  font-size: 90%;
   font-style: bold;
 }
+
+.form-input input {
+  border-style: none;
+  background-color: #EAF1FE;
+  height: 7vw;
+  padding: 3px;
+  border-radius: 5px;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+/* FIN DEL DISEÑO SIGN IN*/
+
 
 /*Navbar component ----------*/
 
 .navbar {
+  margin: 0;
+  padding: 5% 0;
   background-image: url(../images/fondonav.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no repeat;
-  height: 130px;
+  height: 2px;
+  width: 100%;
+  position: sticky;
+  top: 0;
 
-  display: flex;
+  /*display: flex;
   flex-direction: row;
   font-family: "Fredoka", Arial, Helvetica, sans-serif;
-  font-size: 16px;
   font-style: bold;
   /*position: absolute;
   left: 0;
@@ -147,37 +141,86 @@ body {
   top: o;*/
 }
 .libretanav {
+  display:none;
+  margin-top: 3%;
+  margin-left: 3%;
   border-radius: 0;
-  width: 100px;
   transform: rotate(-20deg);
+  width: 40%;
 }
 
-.navbar ul {
+.textsNav{
+  margin-left: 5px;;
+  display: flex;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:5px;
+}
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+.buttonsign {
+  background-color: #98f5e1;
+  width: 125%;
+  height: 25px;
+  border-radius: 5px;
+  border-color: #98f5e1;
+  font-size: 90%;
+  font-style: bold;
+}
+
+/* Footer*/
+.footerTotal {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  justify-content: space-around;
+  text-align: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 100%;
+  margin: 0;
+  padding: 5% 0;
 }
 
-.buttonsign {
-  background-color: #98f5e1;
-  width: 80px;
-  height: 40px;
-  border-radius: 5px;
-  border-color: #98f5e1;
-  font-size: 18px;
-  font-style: bold;
+/*Home*/
+
+.content {
+  /*margin-top: 3%;*/
+  margin-left: 5%;
+
+  font-size: 12px;
 }
+
 /* NewTask.vue ---------- */
-
+.tituloNewTask {
+  width: 80%;
+  margin: 5%;
+  padding-left: 5%;
+  font-size: 30px;
+}
 .newTask {
   background-color: white;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
-  height: 200px;
+  margin-top: 2%;
+  padding: 3%;
+  width: 50%;
+  height: 180px;
+
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -186,28 +229,80 @@ body {
   box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
 }
 
-.tituloNewTask {
-  margin-left: 35%;
+.inputTitle {
+  margin-top: 5%;
+  background-color: rgba(152, 245, 225, 0.2);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border-style: none;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
 }
+
+.inTextDescp {
+  margin-top: 5%;
+  background-color: rgba(152, 245, 225, 0.2);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border-style: none;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buttonAdd {
+  margin-top: 5%;
+  background-color: #98f5e1;
+  border-radius: 5px;
+  border-color: #98f5e1;
+  font-size: 90%;
+  font-style: bold;
+  width: 30%;
+  height: 40px;
+}
+
 .inTextDescp {
   height: 100px;
 }
 
 /* Task.vue-------*/
+.recuadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notadh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .containerTask {
-  background-image: url(../images/Fondonotaclipamarillo.PNG);
+  margin-top: 5%;
+  background-image: url(/src/images/Fondonotaclipamarillo.PNG);
   background-size: contain;
-  background-position: 0 0;
+  background-position: center;
   background-repeat: no-repeat;
   font-family: Handlee, Arial, Helvetica, sans-serif;
-  width: 250px;
+  width: 200px;
   height: 250px;
   text-align: center;
-  justify-content: center;
-  padding-top: 5%;
-  padding-left: 5%;
+  display: flex;
   font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.containerTask task.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
 }
 
 .buttCompl {
@@ -238,13 +333,13 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no repeat;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
   border: none;
   outline: none;
   background-color: transparent;
 }
-.hovComp {
+/*.hovComp {
   display: none;
   position: relative;
   top: 100%;
@@ -286,11 +381,43 @@ body {
   width: 60px;
 }
 .buttDel:hover + .hovDel {
-  display: block;
-}
+  display: block;*/
+
 /* SignUp Component */
 
-/* Home view */
+/* Clock component --------*/
+
+.clock {
+  margin-top: 20%;
+  margin-left: 10%;
+  margin-right: auto;
+}
+
+.textClock {
+  margin-top: 20%;
+  margin-left: 20%;
+  font-size: 200%;
+}
+
+.imgClock {
+  border-radius: 0;
+  width: 30%;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+.nino img{
+  border-radius: 0px;
+  width: 30%;
+  position: ;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.blanco{
+  background-color: white;
+  margin: 0px;
+  height: 80%;
+}
 
 /* Account View */
 
@@ -311,19 +438,12 @@ body {
   }
 }
 
-/* Footer Component -------- */
-.footerTotal {
-  background-image: url(../images/fondonav.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no repeat;
-  height: 80px;
 
-  display: flex;
-  flex-direction: row;
-  font-family: "Fredoka", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-style: bold;
-  position: absolute;
-  bottom: 0;
-}
+/*--colorWhite: #ffffff;
+    --colorBlack: #000000;
+    --colorRed: red;
+    --fontSize-sm: 16px;
+    --fontFamily: 'Arial, Helvetica, sans-serif';
+    --fontTitle: 'Arial';
+    --fontBody: 'Helvetica';*/
+

@@ -150,10 +150,18 @@ Pueden encontrar una copia de este proyecto en el repositorio de git hub:\***\*\
 - [x] Terminar el uso de los botones
 - [x] Clock
 
-###### Martes 21, Febrero 2023
+###### Miercoles 22, Febrero 2023
 
 - [1/2] Arreglar el Responsive de la web
 - [1/2] Acabar el CSS general de la web
+- [ ] Modal
+- [ ] Menú hamburguesa
+- [ ] SweetAlert
+
+###### Jueves 23, Febrero 2023
+
+- [1/2] Arreglar el Responsive de la web
+- [ ] Ultimos retoques CSS
 - [ ] Modal
 - [ ] Menú hamburguesa
 - [ ] SweetAlert

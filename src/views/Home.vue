@@ -16,7 +16,7 @@
       />
     </div>
   </div>
-  <!--<footer-component />-->
+  <FooterComponent></FooterComponent>
 </template>
 
 <script setup>
