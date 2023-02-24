@@ -9,13 +9,8 @@
       </h4>
     </div>
     <div>
-      <template v-if="task.is_complete">
-        <button class="disabled buttUpd"></button>
-      </template>
-      <template v-else>
         <button v-if="hideBut" class="buttUpd" @click="showModalInputToggle"></button>
-      </template>
-      <button v-if="hideBut" class="buttCompl" @click="toogleTask"></button>
+      <button class="buttCompl" @click="toogleTask"></button>
 
       <button v-if="hideBut" class="buttDel" @click="showModalToggle"></button>
     </div>
@@ -103,7 +98,7 @@ const props = defineProps({
 const showInput = ref(false);
 const newTitle = ref("");
 const newDescription = ref("");
-const hideBut = (true)
+const hideBut = ref(true);
 const showModalEdit = ref(false);
 const showModalInputToggle = () => {
   showModalEdit.value = !showModalEdit.value;

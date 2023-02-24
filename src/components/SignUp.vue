@@ -18,53 +18,31 @@
           <div class="form">
             <div class="form-input">
               <label class="input-field-label"></label>
-              <input
-                type="email"
-                class="input-field"
-                placeholder="insert your email here"
-                id="email"
-                v-model="email"
-                required
-              />
+              <input type="email" class="input-field" placeholder="insert your email here" id="email" v-model="email"
+                required />
             </div>
             <div class="form-input">
               <label class="input-field-label"></label>
-              <input
-                type="password"
-                class="input-field"
-                placeholder="insert your pasword here"
-                id="password"
-                v-model="password"
-                required
-              />
+              <input type="password" class="input-field" placeholder="insert your pasword here" id="password"
+                v-model="password" required />
             </div>
             <div class="form-input">
               <label class="input-field-label"></label>
-              <input
-                type="password"
-                class="input-field"
-                placeholder="confirm your password"
-                id="confirmPassword"
-                v-model="confirmPassword"
-                required
-              />
+              <input type="password" class="input-field" placeholder="confirm your password" id="confirmPassword"
+                v-model="confirmPassword" required />
             </div>
-            <button class="buttonSign" type="submit">Sign Up</button>
-            <p>
+            <button class="buttonSign butSup" type="submit">Sign Up</button>
+            <p class="account">
               Have an account?
-              <PersonalRouter
-                :route="route"
-                :buttonText="buttonText"
-                class="sign-up-link"
-              />
+              <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link" />
             </p>
           </div>
         </form>
       </div>
     </div>
-          
 
-      <div v-show="errorMsg">{{ errorMsg }}</div>
+
+    <div v-show="errorMsg">{{ errorMsg }}</div>
   </main>
 </template>
 

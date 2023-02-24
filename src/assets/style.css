@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Handlee&family=Neucha&family=Open+Sans&display=swap");
 
+
+
 :root {
   background-color: #98f5e1;
   opacity: 0.9;
@@ -61,6 +63,7 @@ body {
 
 .containersing1 h4 {
   width: 70vw;
+  font-size: 120%;
 }
 
 .containersing2 {
@@ -78,7 +81,15 @@ body {
   width: 70%;
   height: 100%;
   font-size: 80%;
-  gap: 5px;
+  gap: 12px;
+}
+
+.containersing2 h3{
+  font-size: 150%;
+}
+
+.header-subtitle{
+  margin-bottom: 5px;
 }
 
 .formInputs {
@@ -114,34 +125,32 @@ body {
   border-radius: 5px;
   justify-content: center;
   padding-left: 10px;
+  text-align: center;
+}
+
+.butSup {
+  margin-left: 35%;
 }
 
 /* FIN DEL DISEÑO SIGN IN*/
 
 
 /*Navbar component ----------*/
-
+.navtotal{
+  padding:0;
+}
 .navbar {
-  margin: 0;
   background-image: url(../images/fondonav.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no repeat;
-  height: 5vw;
   width: 100vw;
   position: sticky;
   top: 0;
   right: 0;
   left: 0;
-
-  /*display: flex;
-  flex-direction: row;
-  font-family: "Fredoka", Arial, Helvetica, sans-serif;
-  font-style: bold;
-  /*position: absolute;
-  left: 0;
-  right: 0;
-  top: o;*/
+  display: flex;
+  justify-content: space-between;
 }
 .libretanav {
   display:none;
@@ -153,7 +162,7 @@ body {
 }
 
 .textsNav{
-  margin-left: 5px;;
+  margin-right: 20%;
   display: flex;
   font-size: 12px;
   text-decoration: none;
@@ -181,6 +190,9 @@ body {
   font-style: bold;
 }
 
+.butLog {
+  margin-left: 150%;
+}
 /*Navbar menu hamburguesa ------*/
 .nav-ordernador{
   display:none;
@@ -190,13 +202,15 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    border-radius: 0 0 15% 0;
-    width: 100%;
+    border-radius: 0 0 8% 8%;
+    width: 50%;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu.active {
     display: flex;
+    flex-direction: column;
+    background-color: #fff;
   }
 
   .navBtn {
@@ -241,6 +255,7 @@ body {
   .navBtn1{
     display: none
   }
+
 
 nav {
   display: flex;
@@ -351,15 +366,17 @@ nav {
   width: 80%;
   margin: 5%;
   padding-left: 5%;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
+  color: #3d3939;
 }
 .newTask {
   background-color: white;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2%;
+  margin-top: 6%;
+  margin-bottom: 3%;
   padding: 3%;
   width: 50%;
   height: 180px;
@@ -404,7 +421,7 @@ nav {
   font-size: 90%;
   font-style: bold;
   width: 30%;
-  height: 40px;
+  height: 50px;
 }
 
 .inTextDescp {
@@ -436,18 +453,13 @@ nav {
   height: 250px;
   text-align: center;
   display: flex;
-  font-size: 25px;
+  font-size: 18px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5%;
 }
 
-.containerTask task.title {
-  font-size: 20px;
-  font-weight: bold;
-  color: red;
-}
 
 .buttCompl {
   background-image: url(../images/Botonconfirmar.PNG);
@@ -621,31 +633,51 @@ nav {
 
 /* Clock component --------*/
 
+.libretaclock{
+  border-radius: 0;
+  width: 30%;
+}
+.totalClock{
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.clockContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap:20px;
+}
+
 .clock {
-  margin-top: 20%;
+  /*margin-top: 20%;
   margin-left: 10%;
-  margin-right: auto;
+  margin-right: auto;*/
+
 }
 
 .textClock {
-  margin-top: 20%;
-  margin-left: 20%;
-  font-size: 200%;
+  /*margin-top: 20%;
+  margin-left: 20%;*/
+  font-size: 250%;
 }
 
 .imgClock {
   border-radius: 0;
   width: 20%;
-  margin-top: 10%;
-  margin-left: 40%;
+  /*margin-top: 10%;
+  margin-left: 40%;*/
 }
 
 .nino img{
   border-radius: 0px;
-  width: 40%;
-  margin-left: 30%;
+  width: 20%;
+  /*margin-left: 30%;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 0;*/
 }
 .blanco{
   background-color: white;
@@ -703,11 +735,93 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap:5%;
 }
 
 
 }
 @media (min-width: 750px) {
+
+
+  /*Sign in y Sign UP ---- */
+
+  .libretanav {
+    display: block;
+  margin-top: 3%;
+  margin-left: 5%;
+  border-radius: 0;
+  transform: rotate(-20deg);
+  width: 15%;
+  }
+
+  .containersing2 {
+  margin-top: 5%;
+  margin-bottom: 1%;
+  margin-left: 12vw;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  font-size: 80%;
+  gap: 10px;
+}
+
+  .containersing2 h3{
+  font-size: 200%;
+}
+
+ .header-subtitle {
+  font-size:15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }
+
+.form-input input {
+  border-style: none;
+  background-color: #EAF1FE;
+  height: 7vw;
+  width: 40vw;
+  padding: 3px;
+  border-radius: 5px;
+  justify-content: center;
+  padding-left: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.form-input ::placeholder{
+  font-size: 15px;
+  color: #777;
+  text-align: center;
+}
+.account{
+  font-size: 15px;
+}
+
+.buttonSign {
+  background-color: #98f5e1;
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
+  border-color: #98f5e1;
+  font-size: 120%;
+  font-style: bold;}
+
+  .butLog{
+    height: 50px;
+    width: 90px;
+    font-size: 150%;
+    font-weight: 550;
+    color:grey
+  }
+
+  /*Navegador -----*/
+
 
   .nav-ordernador{
     display: flex;
@@ -740,6 +854,34 @@ nav {
 
 .hamburger.active span:last-of-type {
   transform: translateY(-9px) rotate(-45deg);
+}
+
+/*New Tasks -------*/
+.tituloNewTask {
+  font-size: 200%;
+}
+.newTask{
+  width: 30%;
+}
+.inputTitle{
+  height: 40px;
+  width: 220px;
+}
+
+.inTextDescp {
+  width: 220px;
+}
+
+.buttonAdd {
+  height: 80px;
+}
+
+.libretaclock{
+  display:none
+}
+
+.imgClock{
+  width: 100px;
 }
 }
 

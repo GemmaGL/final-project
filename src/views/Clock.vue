@@ -36,37 +36,38 @@ onMounted(() => {
 </script>
 
 <template>
-  <Nav></Nav>
-  <div class="clockContainer">
-    <div class="textClock">What time is it?</div>
-    <img class="imgClock" src="../images/despertador.png" alt="despertador" />
-  
-    <div class="clock">
-      <span class="hour">{{ hours }}</span
-      >: <span class="minute">{{ minutes }}</span
-      >:
-      <span class="second">{{ seconds }}</span>
+  <div class="totalClock">
+    <Nav></Nav>
+    <!--<img class="libretaclock" src="../images/agenda.png" alt="libreta">-->
+    <div class="clockContainer">
+      <div class="textClock">What time is it?</div>
+      <img class="imgClock" src="../images/despertador.png" alt="despertador" />
+
+      <div class="clock">
+        <span class="hour">{{ hours }}</span>: <span class="minute">{{ minutes }}</span>:
+        <span class="second">{{ seconds }}</span>
+      </div>
+      <!-- <div class="nino">
+            <img src="../images/ninopaz.png" />
+          </div>-->
+      <div class="blanco"></div>
     </div>
-    <div class="nino">
-      <img src="../images/ninopaz.png" />
-    </div>
-    <div class="blanco"></div>
+    <footer-component />
   </div>
-  <footer-component />
 </template>
 
 <style scoped>
 .clock {
   display: inline-block;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: bold;
   text-align: center;
-  padding: 0.5em;
-  background-color: #eee;
   padding: 2%;
+  background-color: #eee;
   border-radius: 1em;
-  width: 300px;
+  width: 70%;
 }
+
 .hour,
 .minute,
 .second {

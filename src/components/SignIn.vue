@@ -42,7 +42,7 @@
             </button>
           </div>
         </form>
-        <p>
+        <p class="account">
           Dont have an account?
           <PersonalRouter
             :route="route"

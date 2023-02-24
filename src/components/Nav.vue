@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navtotal">
     <div class="navbar">
       <button @click="toggleMenuHamburger" class="hamburger">
         <span></span>
@@ -14,14 +14,14 @@
 
         <span class="nav-menu" :class="{ active: showMenu }">
           <router-link v-if="showMenu" to="/" class="navBtn"> Home </router-link>
-          <router-link v-if="showMenu" to="/" class="navBtn">Task Manager</router-link>
+          <router-link v-if="showMenu" to="/" class="navBtn">Tasks</router-link>
           <router-link v-if="showMenu" to="/Clock" class="navBtn">Clock</router-link>
           <!--<router-link v-if="showMenu" to="/account" class="navBtn">Your Account</router-link>-->
         </span>
 
         <span class="nav-ordernador">
           <router-link to="/" class="navBtn"> Home </router-link>
-          <router-link to="/" class="navBtn">Task Manager</router-link>
+          <router-link to="/" class="navBtn">Tasks</router-link>
           <router-link to="/Clock" class="navBtn">Clock</router-link>
         </span>
 
@@ -29,7 +29,7 @@
             <router-link to="/account">Your Account</router-link>
           </li>-->
         <div class="log-out-welcome">
-          <button @click="signOut" class="buttonsign">Log out</button>
+          <button @click="signOut" class="buttonsign butLog">Log out</button>
         </div>
       </div>
 
